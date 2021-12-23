@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-const CartItem = () => {
+const CartItem = ({product}) => {
     let [quantity, setquantity] = useState(0);
 
  
@@ -8,12 +8,12 @@ const CartItem = () => {
     
                   
     <div className="cart-item">
-        <div className="item-img">
-            <img src="https://picsum.photos/150" alt="" />
-        </div>
+         <div className="item-img">
+        <img src={"https://backendapi.turing.com/images/products/"+product.thumbnail} alt="" />
+         </div>
         <div className="item-info">
-            <label htmlFor="">Label</label>
-            <span>Category</span>
+            <label htmlFor="">{product.name}</label>
+            <p>{product.description}</p>
             <span>Remove <span className="remove"> x</span></span>
         </div>
         <div className="item-info">
@@ -33,7 +33,7 @@ const CartItem = () => {
   </div>
       
         <div className="item-info">
-            <label htmlFor="">150DT</label>
+            <label htmlFor="">{product.price}DT</label>
        
         </div>
         </div>

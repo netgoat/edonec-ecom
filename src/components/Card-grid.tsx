@@ -16,7 +16,7 @@ api.products.findAll().then( response => setproducts(response.data.rows))
  
           
             {
-              products.map(product=>( <Card product={product}/> ))
+              products.map(product=>( <Card key={product.product_id} product={product}/> ))
             }
          
     

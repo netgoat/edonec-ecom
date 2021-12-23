@@ -4,9 +4,8 @@ import * as actionTypes from "../actionTypes";
   const add = (item) => {
     return {
       type: actionTypes.ADD_TO_CART,
-      payload: {
-        item
-       },
+      payload: item
+      ,
     };
   };
    

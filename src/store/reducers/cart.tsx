@@ -13,10 +13,11 @@ const cartReducer = (state = INITIAL_STATE, action) =>{
         case actionTypes.ADD_TO_CART:
                
           // Check if Item is in cart already
-          const inCart = state.items.find((item) =>
+          let inCart = state.items.find((item) =>
             item.id === action.payload.product_id ? true : false
           );
-    
+          console.log(inCart);
+
           return {
             ...state,
             items: inCart
